@@ -1,0 +1,587 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body p::selection,
+body a::selection,
+body label::selection,
+body button::selection,
+body input::selection {
+    background-color: transparent;
+}
+
+/* IMPORT FONT */
+
+@font-face {
+    font-family: NexaE;
+    src: url(./Font/Nexa-ExtraLight.ttf);
+}
+@font-face {
+    font-family: NexaH;
+    src: url(./Font/Nexa-Heavy.ttf);
+}
+@font-face {
+    font-family: MontserratR;
+    src: url(./Font/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: MontserratM;
+    src: url(./Font/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: MontserratSB;
+    src: url(./Font/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: MontserratB;
+    src: url(./Font/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Sephora;
+    src: url(./Font/Sephora.ttf);
+}
+@font-face {
+    font-family: SephoraB;
+    src: url(./Font/Sephora-Bold.ttf);
+}
+@font-face {
+    font-family: Petrov;
+    src: url(./Font/PetrovSans-Bold.ttf);
+}
+
+/* NAVBAR DESIGN */
+
+.header {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.header .navbar {
+    height: 70px;
+    display: flex;
+    padding: 0 25px;
+    align-items: center;
+    background-color: #252525;
+    justify-content: space-between;
+}
+
+.header .navbar .navbarLeft {
+    display: flex;
+    justify-content: center;
+}
+
+.header .navbar .navbarLeft p {
+    font-size: 22px;
+    font-family: MontserratB;
+    background: -webkit-linear-gradient(0deg, #93BFCF 20%, #DED9C4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header .navbar .navbarRight {
+    gap: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .navbar .navbarRight a {
+    gap: 10px;
+    display: flex;
+    font-size: 10px;
+    color: #FFFFFF50;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 0.15px;
+    transition: all 0.5s ease;
+    font-family: MontserratM;
+}
+
+.header .navbar .navbarRight a.Active {
+    color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:hover {
+    color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:focus-within {
+    outline: none;
+}
+
+.header .navbar .navbarRight a .markLine {
+    width: 3px;
+    height: 1.35vh;
+    border-radius: 1.5px;
+    background-color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:last-child {
+    font-size: 10px;
+    color: #252525;
+    padding: 6px 30px;
+    border-radius: 4px;
+    font-family: MontserratSB;
+    background-color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:last-child:hover {
+    background-color: #74A0B0;
+}
+
+.header .navbar .dropDown {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .navbar .dropDown {
+    font-size: 20px;
+    color: #FFFFFF75;
+    transition: all 0.5s ease;    
+}
+
+.header .navbar .dropDown:hover {
+    color: #93BFCF;
+}
+
+/* SUBHEADER DESIGN */
+
+.subHeader {
+    display: flex;
+    padding: 20px 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subHeader .subHeaderLeft {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.subHeader .subHeaderLeft p:first-child {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.25px;
+    font-family: MontserratM;
+}
+
+.subHeader .subHeaderLeft p:last-child {
+    font-size: 24px;
+    color: #74A0B0;
+    margin-left: -1px;
+    font-family: MontserratB;
+}
+
+.subHeader .subHeaderRight {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.subHeader .subHeaderRight a {
+    gap: 10px;
+    display: flex;
+    font-size: 10px;
+    color: #252525;
+    padding: 6px 25px;
+    border-radius: 4px;
+    align-items: center;
+    text-decoration: none;
+    font-family: MontserratSB;
+    transition: all 0.5s ease;
+    background-color: #93BFCF;
+}
+
+.subHeader .subHeaderRight a:hover {
+    background-color: #74A0B0;
+}
+
+.subHeader .subHeaderRight a:focus-within {
+    outline: none;
+}
+
+/* ACCOUNT DESIGN */
+
+.account {
+    gap: 15px;
+    display: flex;
+    padding: 20px 25px;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.account .accountLeft {
+    gap: 10px;
+    width: 25%;
+    height: 300px;
+    display: flex;
+    padding: 20px 25px;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #10101025;  
+}
+
+.account .accountLeft .headerAccountLeft {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account .accountLeft .headerAccountLeft p {
+    font-size: 14px;
+    color: #252525;
+    font-family: MontserratB;
+}
+
+.account .accountLeft .lineAccountLeft {
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #ECEDEC;
+}
+
+.account .accountLeft .contentAccountLeft {
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: auto;
+    margin: 10px 0 5px;
+    align-items: start;
+    flex-direction: column;
+}
+
+.account .accountLeft .contentAccountLeft .accountLeftBox {
+    gap: 1px;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.account .accountLeft .contentAccountLeft .accountLeftBox p:nth-child(1) {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.15px;
+    font-family: MontserratM;
+}
+
+.account .accountLeft .contentAccountLeft .accountLeftBox p:nth-child(2) {
+    font-size: 16px;
+    color: #252525;
+    font-family: Petrov;
+}
+
+.account .accountLeft .contentAccountLeft .accountLeftBox .backgroundBar {
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ECEDEC;
+}
+
+.account .accountLeft .contentAccountLeft .accountLeftBox .backgroundBar .bar {
+    height: 100%;
+    border-radius: 2px;
+    background-color: #93BFCF;
+    box-shadow: 0 5px 10px #93BFCF90;
+}
+
+.account .accountLeft .contentAccountLeft .accountLeftBox:first-child {
+    gap: 5px;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.account .accountLeft .contentAccountLeft .accountLeftBox:first-child .boxAttendance {
+    width: 100%;
+    display: flex;
+    padding: 0 10px;
+    flex-direction: column;
+    justify-content: center;
+    border-left: solid 2.5px #93BFCF;
+}
+
+/* TABLE ACCOUNT */
+
+.account .accountRight {
+    width: 75%;
+    height: 300px;
+    display: flex;
+    padding: 20px 25px;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #10101025;  
+}
+
+.account .accountRight .headerAccountRight {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account .accountRight .headerAccountRight p {
+    font-size: 14px;
+    color: #252525;
+    font-family: MontserratB;
+}
+
+.account .accountRight .lineAccountRight {
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    border-radius: 1px;
+    background-color: #ECEDEC;
+}
+
+.account .accountRight .contentAccountRight {
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: auto;
+    margin: 15px 0 5px;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.account .accountRight .contentAccountRight .infoUser {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.account .accountRight .contentAccountRight .infoUser .biodata {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.account .accountRight .contentAccountRight .infoUser .biodata .idUser {
+    font-size: 10px;
+    color: #C1C1C1;
+    font-family: Petrov;
+    letter-spacing: 1px;
+}
+
+.account .accountRight .contentAccountRight .infoUser .biodata .userName {
+    font-size: 30px;
+    color: #93BFCF;
+    margin-top: 5px;
+    font-family: MontserratB;
+}
+
+.account .accountRight .contentAccountRight .infoUser .biodata .userJob {
+    font-size: 14px;
+    margin-top: 2px;
+    color: #252525;
+    letter-spacing: 0.15px;
+    font-family: MontserratSB;
+}
+
+.account .accountRight .contentAccountRight .infoUser .biodata .userTeam {
+    font-size: 10px;
+    margin-top: 2px;
+    color: #C1C1C1;
+    letter-spacing: 0.15px;
+    font-family: MontserratM;
+}
+
+.account .accountRight .contentAccountRight .infoUser .rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.account .accountRight .contentAccountRight .infoUser .rating p:first-child {
+    font-size: 10px;
+    color: #C1C1C1;
+    font-family: MontserratM;
+}
+
+.account .accountRight .contentAccountRight .infoUser .rating .ratingStar {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.account .accountRight .contentAccountRight .infoUser .rating .ratingStar .starRating {
+    display: flex;
+    cursor: default;
+    font-size: 24px;
+    align-items: center;
+}
+
+.account .accountRight .contentAccountRight .infoUser .rating .ratingStar .starRating .star {
+    color: #ECEDEC;
+    display: inline-block;
+    transition: color 0.5s ease;
+}
+
+.account .accountRight .contentAccountRight .infoUser .rating .ratingStar .starRating .star.Active {
+    color: #FFD700;
+}
+
+.account .accountRight .contentAccountRight .infoUser .rating .ratingStar p:last-child {
+    font-size: 12px;
+    color: #252525;
+    font-family: Petrov;
+}
+
+.account .accountRight .contentAccountRight .infoUser .footer .location {
+    font-size: 10px;
+    color: #C1C1C1;
+    font-family: MontserratSB;
+}
+
+.account .accountRight .contentAccountRight .infoUser .footer .address {
+    font-size: 10px;
+    margin-top: 5px;
+    color: #C1C1C1;
+    letter-spacing: 0.15px;
+    font-family: MontserratM;
+}
+
+.account .accountRight .contentAccountRight .action {
+    height: 100%;
+    display: flex;
+    align-items: start;
+}
+
+.account .accountRight .contentAccountRight .action a {
+    font-size: 10px;
+    color: #92344C;
+    padding: 6px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    font-family: MontserratSB;
+    background-color: #FFC3CF;
+}
+
+.account .accountRight .contentAccountRight .action a:hover {
+    background-color: #EBAEBA;
+}
+
+@media only screen and (max-width: 1000px) {
+    /* NAVBAR RESPONSIVE */
+    .header .navbar .navbarLeft p {
+        font-size: 20px;
+    }
+    .header .navbar .navbarRight {
+        left: 0;
+        top: 35px;
+        opacity: 0;
+        z-index: -1;  
+        display: flex;
+        margin: 0 15px;
+        align-items: start;
+        position: absolute;
+        height: fit-content;
+        flex-direction: column;
+        padding: 40px 30px 25px;
+        transition: all 0.5s ease;
+        background-color: #252525;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 0 5px #252525;
+    }
+    .header .navbar .navbarRight a {
+        margin: 0 auto;
+    }
+    .header .navbar .navbarRight.Active {
+        top: 65px;
+        opacity: 1;
+    }
+    .header .navbar .dropDown {
+        display: flex;
+    }
+    .header .navbar .dropDown.Active {
+        color: #93BFCF;
+    }
+    /* SUBHEADER RESPONSIVE */
+    .subHeader {
+        gap: 10px;
+        align-items: start;
+        flex-direction: column;
+    }
+    .subHeader .subHeaderLeft p:last-child {
+        font-size: 18px;
+    }
+    /* REGISTER RESPONSIVE */
+    .account {
+        flex-wrap: wrap;
+    }
+    .account .accountLeft {
+        width: 100%;
+    }
+    .account .accountLeft .headerAccountLeft p {
+        font-size: 12px;
+    }
+    .account .accountLeft .contentAccountLeft .accountLeftBox p:nth-child(1) {
+        font-size: 8px;
+    }
+    .account .accountLeft .contentAccountLeft .accountLeftBox p:nth-child(2) {
+        font-size: 16px;
+    }
+    .account .accountLeft .contentAccountLeft .accountLeftBox .backgroundBar {
+        height: 4px;
+    }
+    .account .accountRight {
+        width: 100%;
+    }
+    .account .accountRight .headerAccountRight p {
+        font-size: 12px;
+    }
+    .account .accountRight .contentAccountRight .infoUser .biodata .userName {
+        font-size: 18px;
+    }
+    .account .accountRight .contentAccountRight .infoUser .biodata .userJob {
+        font-size: 12px;
+    }
+    .account .accountRight .contentAccountRight .infoUser .biodata .userTeam {
+        font-size: 8px;
+    } 
+    .account .accountRight .contentAccountRight .infoUser .footer p:last-child {
+        font-size: 8px;
+    }
+    .account .accountRight .contentAccountRight .action a {
+        font-size: 8px;
+        padding: 4px 15px;
+    }
+}

@@ -1,0 +1,700 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body p::selection,
+body a::selection,
+body label::selection,
+body button::selection,
+body input::selection {
+    background-color: transparent;
+}
+
+/* IMPORT FONT */
+
+@font-face {
+    font-family: NexaE;
+    src: url(./Font/Nexa-ExtraLight.ttf);
+}
+@font-face {
+    font-family: NexaH;
+    src: url(./Font/Nexa-Heavy.ttf);
+}
+@font-face {
+    font-family: MontserratR;
+    src: url(./Font/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: MontserratM;
+    src: url(./Font/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: MontserratSB;
+    src: url(./Font/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: MontserratB;
+    src: url(./Font/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Sephora;
+    src: url(./Font/Sephora.ttf);
+}
+@font-face {
+    font-family: SephoraB;
+    src: url(./Font/Sephora-Bold.ttf);
+}
+@font-face {
+    font-family: Petrov;
+    src: url(./Font/PetrovSans-Bold.ttf);
+}
+
+/* NAVBAR DESIGN */
+
+.header {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.header .navbar {
+    height: 70px;
+    display: flex;
+    padding: 0 25px;
+    align-items: center;
+    background-color: #252525;
+    justify-content: space-between;
+}
+
+.header .navbar .navbarLeft {
+    display: flex;
+    justify-content: center;
+}
+
+.header .navbar .navbarLeft p {
+    font-size: 22px;
+    font-family: MontserratB;
+    background: -webkit-linear-gradient(0deg, #93BFCF 20%, #DED9C4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header .navbar .navbarRight {
+    gap: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .navbar .navbarRight a {
+    gap: 10px;
+    display: flex;
+    font-size: 10px;
+    color: #FFFFFF50;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 0.15px;
+    transition: all 0.5s ease;
+    font-family: MontserratM;
+}
+
+.header .navbar .navbarRight a.Active {
+    color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:hover {
+    color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:focus-within {
+    outline: none;
+}
+
+.header .navbar .navbarRight a .markLine {
+    width: 3px;
+    height: 1.35vh;
+    border-radius: 1.5px;
+    background-color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:last-child {
+    font-size: 10px;
+    color: #252525;
+    padding: 6px 30px;
+    border-radius: 4px;
+    font-family: MontserratSB;
+    background-color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:last-child:hover {
+    background-color: #74A0B0;
+}
+
+.header .navbar .dropDown {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .navbar .dropDown {
+    font-size: 20px;
+    color: #FFFFFF75;
+    transition: all 0.5s ease;    
+}
+
+.header .navbar .dropDown:hover {
+    color: #93BFCF;
+}
+
+/* SUBHEADER DESIGN */
+
+.subHeader {
+    display: flex;
+    padding: 20px 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subHeader .subHeaderLeft {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.subHeader .subHeaderLeft p:first-child {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.25px;
+    font-family: MontserratM;
+}
+
+.subHeader .subHeaderLeft p:last-child {
+    font-size: 24px;
+    color: #74A0B0;
+    margin-left: -1px;
+    font-family: MontserratB;
+}
+
+.subHeader .subHeaderRight {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.subHeader .subHeaderRight a {
+    gap: 10px;
+    display: flex;
+    font-size: 10px;
+    color: #252525;
+    padding: 6px 25px;
+    border-radius: 4px;
+    align-items: center;
+    text-decoration: none;
+    font-family: MontserratSB;
+    transition: all 0.5s ease;
+    background-color: #93BFCF;
+}
+
+.subHeader .subHeaderRight a i {
+    font-size: 12px;
+}
+
+.subHeader .subHeaderRight a:hover {
+    background-color: #74A0B0;
+}
+
+.subHeader .subHeaderRight a:focus-within {
+    outline: none;
+}
+
+/* POP UP DESIGN */
+
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999; 
+    display: none;
+    position: fixed;  
+    background-color: #00000095;  
+}
+
+.popUp {
+    top: 50%;
+    left: 50%;
+    gap: 10px;
+    width: 50%;
+    opacity: 0;
+    height: 50%;
+    display: flex;
+    z-index: 9999;
+    position: fixed;
+    color: #252525;
+    padding: 30px 35px;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: start;
+    transition: all 0.5s ease;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px #10101025;
+    transform: translate(-50%, -45%) scale(0.5);
+}
+
+.popUp .headerPopUp {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.popUp .headerPopUp p:first-child {
+    font-size: 18px;
+    color: #252525;
+    letter-spacing: -0.35px;
+    font-family: MontserratB;
+}
+
+.popUp .headerPopUp p:last-child {
+    font-size: 12px;
+    color: #C1C1C1;
+    letter-spacing: 0.35px;
+    font-family: MontserratM;
+}
+
+.popUp .linePopUp {
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #ECEDEC;
+}
+
+.popUp .contentPopUp {
+    gap: 15px;
+    height: 100%;
+    display: flex;
+    margin-top: 5px;
+    flex-direction: column;
+}
+
+.popUp .contentPopUp input:focus-within {
+    outline: none;
+}
+
+.popUp .contentPopUp input {
+    height: 100%;
+    font-size: 14px;
+    color: #252525;
+    border-radius: 8px;
+    padding: 10px 10px;
+    font-family: MontserratSB;
+    transition: all 0.25s ease;
+    border: solid 2.5px #ECEDEC;
+}
+
+.popUp .contentPopUp input:focus {
+    border: solid 2.5px #93BFCF;
+}
+
+.popUp .contentPopUp .button {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popUp .contentPopUp .button button:focus-within {
+    outline: none;
+}
+
+.popUp .contentPopUp .button button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    font-family: MontserratSB;
+    background-color: #93BFCF;
+}
+
+.popUp .contentPopUp .button button:hover {
+    background-color: #74A0B0;
+}
+
+.popUp.show {
+    opacity: 1;
+    transform: translate(-50%, -45%) scale(0.7);
+}
+
+/* REQUEST DESIGN */
+
+.request {
+    gap: 15px;
+    display: flex;
+    padding: 20px 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* OVERVIEW DESIGN */
+
+.request .requestLeft {
+    width: 30%;
+    height: 415px;
+    display: flex;
+    padding: 20px 25px;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #10101025;
+}
+
+.request .requestLeft .headerRequestLeft {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.request .requestLeft .headerRequestLeft p {
+    font-size: 14px;
+    color: #252525;
+    font-family: MontserratB;
+}
+
+.request .requestLeft .lineRequestLeft {
+    width: 100%;
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 1px;
+    background-color: #ECEDEC;
+}
+
+.request .requestLeft .contentRequestLeft {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: auto;
+    margin: 15px 0 5px;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.request .requestLeft .contentRequestLeft .requestLeftBox {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.request .requestLeft .contentRequestLeft .requestLeftBox p:nth-child(1) {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.15px;
+    font-family: MontserratM;
+}
+
+.request .requestLeft .contentRequestLeft .requestLeftBox p:nth-child(2) {
+    font-size: 18px;
+    color: #252525;
+    font-family: Petrov;
+}
+
+.request .requestLeft .contentRequestLeft .requestLeftBox .backgroundBar {
+    width: 100%;
+    height: 4px;
+    margin-top: 5px;
+    border-radius: 2px;
+    background-color: #ECEDEC;
+}
+
+.request .requestLeft .contentRequestLeft .requestLeftBox .backgroundBar .bar {
+    height: 100%;
+    border-radius: 2px;
+    background-color: #93BFCF;
+    box-shadow: 0 5px 10px #93BFCF90;
+}
+
+/* TABLE REQUEST DESIGN */
+
+.request .requestRight {
+    width: 100%;
+    height: 415px;
+    padding: 20px 25px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #10101025;
+}
+
+.request .requestRight .headerTable {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.request .requestRight .headerTable p {
+    font-size: 14px;
+    color: #252525;
+    font-family: MontserratB;
+}
+
+.request .requestRight .lineTable {
+    width: 100%;
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 1px;
+    background-color: #ECEDEC;
+}
+
+.request .requestRight .contentTable {
+    width: 100%;
+    height: 385px;
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.request .requestRight .contentTable::-webkit-scrollbar {
+    display: none;
+}
+
+.request .requestRight .contentTable .requestBox {
+    width: 100%;
+    display: flex;
+    padding: 12px 0;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px #ECEDEC;
+}
+
+.request .requestRight .contentTable .requestBox .infoUser {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    margin-left: 5px;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.request .requestRight .contentTable .requestBox .infoUser p:first-child {
+    font-size: 12px;
+    color: #252525;
+    font-family: MontserratB;
+}
+
+.request .requestRight .contentTable .requestBox .infoUser p:last-child {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.25px;
+    font-family: MontserratM;
+}
+
+.request .requestRight .contentTable .requestBox .requestActivity {
+    gap: 5px;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.request .requestRight .contentTable .requestBox .requestActivity .gap {
+    font-size: 12px;
+    color: #C1C1C1;
+}
+
+.request .requestRight .contentTable .requestBox .requestActivity .requestActivityBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.request .requestRight .contentTable .requestBox .requestActivity .requestActivityBox p {
+    width: 75%;
+    padding: 4px 0;
+    font-size: 10px;
+    color: #252525;
+    text-align: center;
+    font-family: MontserratSB;
+}
+
+.request .requestRight .contentTable .requestBox .requestActivity .requestActivityBox:last-child {
+    gap: 5px;
+    display: flex;
+    margin-left: 20px;
+    justify-content: end;   
+}
+
+.request .requestRight .contentTable .requestBox .requestActivity .requestActivityBox:last-child a:first-child {
+    width: 75px;
+    padding: 4px 0;
+    font-size: 10px;
+    color: #92344C;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: MontserratB;
+    transition: all 0.5s ease;
+    background-color: #FFC3CF;
+}
+
+.request .requestRight .contentTable .requestBox .requestActivity .requestActivityBox:last-child a:first-child:hover {
+    background-color: #EBAEBA;
+}
+
+.request .requestRight .contentTable .requestBox .requestActivity .requestActivityBox:last-child a:last-child {
+    width: 75px;
+    padding: 4px 0;
+    font-size: 10px;
+    color: #60A578;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: MontserratB;
+    transition: all 0.5s ease;
+    background-color: #D4EADE;
+}
+
+.request .requestRight .contentTable .requestBox .requestActivity .requestActivityBox:last-child a:last-child:hover {
+    background-color: #BFD5C9;
+}
+
+.request .requestRight .contentTable .nothingActivity {
+    height: 100%;
+    display: flex;
+    font-size: 10px;
+    color: #C1C1C1;
+    align-items: center;
+    letter-spacing: 0.25px;
+    font-family: MontserratM;
+}
+
+@media only screen and (max-width: 1000px) {
+    /* NAVBAR RESPONSIVE */
+    .header .navbar .navbarLeft p {
+        font-size: 20px;
+    }
+    .header .navbar .navbarRight {
+        left: 0;
+        top: 35px;
+        opacity: 0;
+        z-index: -1;  
+        display: flex;
+        margin: 0 15px;
+        visibility: hidden;
+        align-items: start;
+        position: absolute;
+        height: fit-content;
+        flex-direction: column;
+        padding: 40px 30px 25px;
+        transition: all 0.5s ease;
+        background-color: #252525;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 0 5px #252525;
+    }
+    .header .navbar .navbarRight a {
+        margin: 0 auto;
+    }
+    .header .navbar .navbarRight.Active {
+        top: 65px;
+        opacity: 1;
+        visibility: visible;
+    }
+    .header .navbar .dropDown {
+        display: flex;
+    }
+    .header .navbar .dropDown.Active {
+        color: #93BFCF;
+    }
+    /* SUBHEADER RESPONSIVE */
+    .subHeader {
+        gap: 10px;
+        align-items: start;
+        flex-direction: column;
+    }
+    .subHeader .subHeaderLeft p:last-child {
+        font-size: 18px;
+    }
+    /* REQUEST RESPONSIVE */
+    .request {
+        flex-wrap: wrap;
+    }
+    /* OVERVIEW RESPONSIVE */
+    .request .requestLeft {
+        width: 100%;
+    }
+    .request .requestLeft .headerRequestLeft p {
+        font-size: 12px;
+    }
+    .request .requestLeft .contentRequestLeft .requestLeftBox p:nth-child(1) {
+        font-size: 8px;
+    }
+    .request .requestLeft .contentRequestLeft .requestLeftBox p:nth-child(2) {
+        font-size: 16px;
+    }
+    /* TABLE REQUEST RESPONSIVE */
+    .request .requestRight .headerTable p {
+        font-size: 12px;
+    }
+    .request .requestRight .contentTable .requestBox .infoUser p:first-child {
+        font-size: 10px;
+    }
+    .request .requestRight .contentTable .requestBox .infoUser p:last-child {
+        font-size: 8px;
+    }
+    .request .requestRight .contentTable .requestBox .requestActivity .requestActivityBox p {
+        font-size: 8px;
+    }
+    .request .requestRight .contentTable .requestBox .requestActivity .gap:nth-child(2),
+    .request .requestRight .contentTable .requestBox .requestActivity .gap:nth-child(4),
+    .request .requestRight .contentTable .requestBox .requestActivity .requestActivityBox:nth-child(1),
+    .request .requestRight .contentTable .requestBox .requestActivity .requestActivityBox:nth-child(3) {
+        display: none;
+    }
+    .request .requestRight .contentTable .requestBox .requestActivity .requestActivityBox:last-child{
+        margin-left: 10px;
+    }
+    .request .requestRight .contentTable .requestBox .requestActivity .requestActivityBox:last-child a:first-child {
+        width: 50px;
+        font-size: 8px;
+    }
+    .request .requestRight .contentTable .requestBox .requestActivity .requestActivityBox:last-child a:last-child {
+        width: 50px;
+        font-size: 8px;
+    }
+}

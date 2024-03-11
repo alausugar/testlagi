@@ -1,0 +1,722 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body p::selection,
+body a::selection,
+body label::selection,
+body button::selection,
+body input::selection {
+    background-color: transparent;
+}
+
+/* IMPORT FONT */
+
+@font-face {
+    font-family: NexaE;
+    src: url(./Font/Nexa-ExtraLight.ttf);
+}
+@font-face {
+    font-family: NexaH;
+    src: url(./Font/Nexa-Heavy.ttf);
+}
+@font-face {
+    font-family: MontserratR;
+    src: url(./Font/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: MontserratM;
+    src: url(./Font/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: MontserratSB;
+    src: url(./Font/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: MontserratB;
+    src: url(./Font/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Sephora;
+    src: url(./Font/Sephora.ttf);
+}
+@font-face {
+    font-family: SephoraB;
+    src: url(./Font/Sephora-Bold.ttf);
+}
+@font-face {
+    font-family: Petrov;
+    src: url(./Font/PetrovSans-Bold.ttf);
+}
+
+/* NAVBAR DESIGN */
+
+.header {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.header .navbar {
+    height: 70px;
+    display: flex;
+    padding: 0 25px;
+    align-items: center;
+    background-color: #252525;
+    justify-content: space-between;
+}
+
+.header .navbar .navbarLeft {
+    display: flex;
+    justify-content: center;
+}
+
+.header .navbar .navbarLeft p {
+    font-size: 22px;
+    font-family: MontserratB;
+    background: -webkit-linear-gradient(0deg, #93BFCF 20%, #DED9C4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header .navbar .navbarRight {
+    gap: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .navbar .navbarRight a {
+    gap: 10px;
+    display: flex;
+    font-size: 10px;
+    color: #FFFFFF50;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 0.15px;
+    transition: all 0.5s ease;
+    font-family: MontserratM;
+}
+
+.header .navbar .navbarRight a.Active {
+    color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:hover {
+    color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:focus-within {
+    outline: none;
+}
+
+.header .navbar .navbarRight a .markLine {
+    width: 3px;
+    height: 1.35vh;
+    border-radius: 1.5px;
+    background-color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:last-child {
+    font-size: 10px;
+    color: #252525;
+    padding: 6px 30px;
+    border-radius: 4px;
+    font-family: MontserratSB;
+    background-color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:last-child:hover {
+    background-color: #74A0B0;
+}
+
+.header .navbar .dropDown {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .navbar .dropDown {
+    font-size: 20px;
+    color: #FFFFFF75;
+    transition: all 0.5s ease;    
+}
+
+.header .navbar .dropDown:hover {
+    color: #93BFCF;
+}
+
+/* SUBHEADER DESIGN */
+
+.subHeader {
+    display: flex;
+    padding: 20px 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subHeader .subHeaderLeft {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subHeader .subHeaderLeft p:first-child {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.25px;
+    font-family: MontserratM;
+}
+
+.subHeader .subHeaderLeft p:last-child {
+    font-size: 24px;
+    color: #74A0B0;
+    margin-left: -1px;
+    font-family: MontserratB;
+}
+
+.subHeader .subHeaderRight {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.subHeader .subHeaderRight form button {
+    gap: 10px;
+    display: flex;  
+    cursor: pointer;
+    font-size: 12px;
+    color: #93BFCF;
+    padding: 8px 35px;
+    border-radius: 6px;
+    align-items: center;
+    text-decoration: none;
+    font-family: MontserratSB;
+    transition: all 0.5s ease;
+    border: solid 2.5px #93BFCF;
+    background-color: transparent;
+}
+
+.subHeader .subHeaderRight form button i {
+    font-size: 12px;
+}
+
+.subHeader .subHeaderRight form button:hover {
+    color: #FFFFFF;
+    background-color: #93BFCF;
+}
+
+.subHeader .subHeaderRight form button:focus-within {
+    outline: none;
+}
+
+/* ATTENDANCE PAGE DESIGN */
+
+.attendance {
+    gap: 15px;
+    display: flex;
+    padding: 20px 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* FORM ATTENDANCE DESIGN */
+
+.attendance .formAttendance {
+    gap: 10px;
+    width: 40%;
+    height: 400px;
+    display: flex;
+    padding: 20px 25px;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #10101025;  
+}
+
+.attendance .formAttendance .headerFormAttendance {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.attendance .formAttendance .headerFormAttendance p:first-child {
+    font-size: 14px;
+    color: #252525;
+    font-family: MontserratB;
+}
+
+.attendance .formAttendance .headerFormAttendance p:last-child {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.25px;
+    font-family: MontserratSB;
+}
+
+.attendance .formAttendance .lineFormAttendance {
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #ECEDEC;
+}
+
+.attendance .formAttendance .contentFormAttendance {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    align-items: start;
+    flex-direction: column;
+}
+
+.attendance .formAttendance .contentFormAttendance .dataBox {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.attendance .formAttendance .contentFormAttendance .dataBox input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 10px;
+    color: #C1C1C1;
+    border-radius: 8px;
+    background: transparent;
+    font-family: MontserratM;
+    transition: all 0.5s ease;
+    border: 1.5px solid #ECEDEC;
+}
+
+.attendance .formAttendance .contentFormAttendance .dataBox label {
+    top: -3px;
+    left: 10px;
+    padding: 0 5px;
+    font-size: 8px;
+    color: #101010;
+    position: absolute;
+    font-family: MontserratSB;
+    background-color: #FFFFFF;
+}
+
+.attendance .formAttendance .contentFormAttendance .choiceChipBox {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.attendance .formAttendance .contentFormAttendance .choiceChipBox .choiceChip {
+    width: 100%;
+    height: 25px;
+}
+
+.attendance .formAttendance .contentFormAttendance .choiceChipBox .choiceChip label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+    font-size: 10px;
+    color: #101010;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    font-family: MontserratSB;
+    transition: all 0.25s ease;
+    background-color: transparent;
+    border: solid 1.5px #ECEDEC;
+}
+
+.attendance .formAttendance .contentFormAttendance .choiceChipBox .choiceChip label:hover {
+    border-color: #93BFCF;
+}
+
+.attendance .formAttendance .contentFormAttendance .choiceChipBox .choiceChip input[type="radio"] {
+    display: none;
+}
+
+.attendance .formAttendance .contentFormAttendance .choiceChipBox .choiceChip input[type="radio"]:checked + label {
+    color: #FFFFFF;
+    background-color: #93BFCF;
+    border: solid 1.5px transparent;
+}
+
+.attendance .formAttendance .contentFormAttendance .alertMessage {
+    gap: 5px;
+    width: 100%;
+    display: flex;
+    font-size: 10px;
+    color: #93BFCF;
+    align-items: center;
+    margin: 5px 0 -10px 5px;
+    font-family: MontserratSB;
+}
+
+.attendance .formAttendance .contentFormAttendance .attendanceButton {
+    width: 100%;
+    border: none;
+    height: 30px;
+    cursor: pointer;
+    font-size: 10px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    border-radius: 6px;
+    letter-spacing: 0.25px;
+    font-family: MontserratB;
+    transition: all 0.5s ease;
+    background-color: #93BFCF;
+}
+
+.attendance .formAttendance .contentFormAttendance .attendanceButton:hover {
+    background-color: #74A0B0;
+}
+
+.attendance .formAttendance .contentFormAttendance .attendanceButton:active {
+    transform: scale(0.99);
+}
+
+.attendance .formAttendance .contentFormAttendance .message {
+    gap: 5px;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    font-size: 10px;
+    margin-top: 10px;
+    color: #60A578;
+    border-radius: 6px;
+    align-items: center;
+    letter-spacing: 0.25px;
+    justify-content: center;
+    font-family: MontserratSB;
+    background-color: #D4EADE;
+}
+
+/* TABLE ATTENDANCE DESIGN */
+
+.attendance .tableAttendance {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    padding: 20px 25px;
+    align-items: start;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #10101025;
+}
+
+.attendance .tableAttendance .headerTableAttendance {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.attendance .tableAttendance .headerTableAttendance .headerTableAttendanceLeft {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.attendance .tableAttendance .headerTableAttendance .headerTableAttendanceLeft p {
+    font-size: 14px;
+    color: #252525;
+    font-family: MontserratB;
+}
+
+.attendance .tableAttendance .headerTableAttendance .headerTableAttendanceLeft .rangeDate {
+    display: flex;
+    align-items: center;
+}
+
+.attendance .tableAttendance .headerTableAttendance .headerTableAttendanceLeft .rangeDate p {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.25px;
+    font-family: MontserratSB;
+}
+
+.attendance .tableAttendance .headerTableAttendance .headerTableAttendanceRight {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.attendance .tableAttendance .headerTableAttendance .headerTableAttendanceRight .inputRange {
+    position: relative;
+}
+
+.attendance .tableAttendance .headerTableAttendance .headerTableAttendanceRight .inputRange label {
+    top: -4px;
+    left: 5px;
+    padding: 0 5px;
+    font-size: 8px;
+    color: #252525;
+    position: absolute;
+    font-family: MontserratSB;
+    background-color: #FFFFFF;
+}
+
+.attendance .tableAttendance .headerTableAttendance .headerTableAttendanceRight .inputRange input {
+    width: 115px;
+    display: flex;
+    font-size: 10px;
+    color: #C1C1C1;
+    padding: 7px 8px;
+    border-radius: 6px;
+    justify-content: start;
+    text-transform: uppercase;
+    font-family: MontserratSB;
+    background-color: transparent;
+    border: solid 1.5px #ECEDEC;
+}
+
+.attendance .tableAttendance .headerTableAttendance .headerTableAttendanceRight .inputRange input[type="date"]:focus-within {
+    outline: none;
+}
+
+.attendance .tableAttendance .headerTableAttendance .headerTableAttendanceRight input[type="submit"] {
+    cursor: pointer;
+    font-size: 10px;
+    color: #FFFFFF;
+    padding: 7px 18px;
+    border-radius: 6px;
+    transition: all 0.5s ease;
+    font-family: MontserratSB;
+    background-color: #93BFCF;
+    border: solid 1.5px #93BFCF;
+}
+
+.attendance .tableAttendance .headerTableAttendance .headerTableAttendanceRight input[type="submit"]:focus {
+    outline: none;
+}
+
+.attendance .tableAttendance .headerTableAttendance .headerTableAttendanceRight input[type="submit"]:hover {
+    background-color: #74A0B0;
+    border: solid 1.5px #74A0B0;
+}
+
+.attendance .tableAttendance .lineTableAttendance {
+    width: 100%;
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 2px;
+    background-color: #ECEDEC;
+}
+
+.attendance .tableAttendance .contentTableAttendance {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.attendance .tableAttendance .contentTableAttendance::-webkit-scrollbar {
+    display: none;
+}
+
+.attendance .tableAttendance .contentTableAttendance .attendanceBox {
+    width: 100%;
+    display: flex;
+    padding: 12px 0;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px #ECEDEC;
+}
+
+.attendance .tableAttendance .contentTableAttendance .attendanceBox .infoUser {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    margin-left: 5px;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.attendance .tableAttendance .contentTableAttendance .attendanceBox .infoUser p:first-child {
+    font-size: 12px;
+    color: #252525;
+    font-family: MontserratB;
+}
+
+.attendance .tableAttendance .contentTableAttendance .attendanceBox .infoUser p:last-child {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.25px;
+    font-family: MontserratM;
+}
+
+.attendance .tableAttendance .contentTableAttendance .attendanceBox .attendanceActivity {
+    gap: 5px;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.attendance .tableAttendance .contentTableAttendance .attendanceBox .attendanceActivity .gap {
+    font-size: 12px;
+    color: #C1C1C1;
+}
+
+.attendance .tableAttendance .contentTableAttendance .attendanceBox .attendanceActivity .attendanceActivityBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attendance .tableAttendance .contentTableAttendance .attendanceBox .attendanceActivity .attendanceActivityBox p {
+    width: 75%;
+    padding: 4px 0;
+    font-size: 10px;
+    color: #252525;
+    text-align: center;
+    font-family: MontserratSB;
+}
+
+.attendance .tableAttendance .contentTableAttendance .attendanceBox .attendanceActivity .attendanceActivityBox:last-child {
+    display: flex;
+    justify-content: end;
+}
+
+.attendance .tableAttendance .contentTableAttendance .attendanceBox .attendanceActivity .attendanceActivityBox:last-child p {
+    border-radius: 4px;
+    font-family: MontserratB;
+}
+
+@media only screen and (max-width: 1000px) {
+    /* NAVBAR RESPONSIVE */
+    .header .navbar .navbarLeft p {
+        font-size: 20px;
+    }
+    .header .navbar .navbarRight {
+        left: 0;
+        top: 35px;
+        opacity: 0;
+        z-index: -1;  
+        display: flex;
+        margin: 0 15px;
+        visibility: hidden;
+        align-items: start;
+        position: absolute;
+        height: fit-content;
+        flex-direction: column;
+        padding: 40px 30px 25px;
+        transition: all 0.5s ease;
+        background-color: #252525;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 0 5px #252525;
+    }
+    .header .navbar .navbarRight a {
+        margin: 0 auto;
+    }
+    .header .navbar .navbarRight.Active {
+        top: 65px;
+        opacity: 1;
+        visibility: visible;
+    }
+    .header .navbar .dropDown {
+        display: flex;
+    }
+    .header .navbar .dropDown.Active {
+        color: #93BFCF;
+    }
+    /* SUBHEADER RESPONSIVE */
+    .subHeader {
+        gap: 10px;
+        align-items: start;
+        flex-direction: column;
+    }
+    .subHeader .subHeaderLeft p:last-child {
+        font-size: 18px;
+    }
+    .subHeader .subHeaderRight {
+        flex-direction: column;
+    }
+    /* ATTENDANCE RESPONSIVE */
+    .attendance {
+        flex-wrap: wrap;
+    }
+    /* FORM ATTENDANCE REPONSIVE */
+    .attendance .formAttendance {
+        width: 100%
+    }
+    .attendance .tableAttendance {
+        width: 100%;
+    }
+    .attendance .formAttendance .headerFormAttendance p:first-child {
+        font-size: 12px;
+    }
+    .attendance .formAttendance .headerFormAttendance p:last-child {
+        font-size: 8px;
+    }
+    /* TABLE ATTENDANCE RESPONSIVE */
+    .attendance .tableAttendance .headerTableAttendance .headerTableAttendanceLeft p {
+        font-size: 12px;
+    }
+    .attendance .tableAttendance .headerTableAttendance .headerTableAttendanceLeft .rangeDate p {
+        font-size: 8px;
+    }
+    .attendance .tableAttendance .headerTableAttendance .headerTableAttendanceRight {
+        display: none;
+    }
+    .attendance .tableAttendance .contentTableAttendance .attendanceBox .infoUser {
+        width: 50%;
+    }
+    .attendance .tableAttendance .contentTableAttendance .attendanceBox .infoUser p:first-child {
+        font-size: 10px;
+    }
+    .attendance .tableAttendance .contentTableAttendance .attendanceBox .infoUser p:last-child {
+        font-size: 8px;
+    }
+    .attendance .tableAttendance .contentTableAttendance .attendanceBox .attendanceActivity {
+        width: 50%;
+    }
+    .attendance .tableAttendance .contentTableAttendance .attendanceBox .attendanceActivity .attendanceActivityBox p {
+        font-size: 8px;
+    }
+    .attendance .tableAttendance .contentTableAttendance .attendanceBox .attendanceActivity .gap:nth-child(4) {
+        display: none;
+    }
+    .attendance .tableAttendance .contentTableAttendance .attendanceBox .attendanceActivity .attendanceActivityBox:last-child {
+        display: none;
+    }
+}

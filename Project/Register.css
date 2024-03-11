@@ -1,0 +1,712 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body p::selection,
+body a::selection,
+body label::selection,
+body button::selection,
+body input::selection {
+    background-color: transparent;
+}
+
+/* IMPORT FONT */
+
+@font-face {
+    font-family: NexaE;
+    src: url(./Font/Nexa-ExtraLight.ttf);
+}
+@font-face {
+    font-family: NexaH;
+    src: url(./Font/Nexa-Heavy.ttf);
+}
+@font-face {
+    font-family: MontserratR;
+    src: url(./Font/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: MontserratM;
+    src: url(./Font/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: MontserratSB;
+    src: url(./Font/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: MontserratB;
+    src: url(./Font/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Sephora;
+    src: url(./Font/Sephora.ttf);
+}
+@font-face {
+    font-family: SephoraB;
+    src: url(./Font/Sephora-Bold.ttf);
+}
+@font-face {
+    font-family: Petrov;
+    src: url(./Font/PetrovSans-Bold.ttf);
+}
+
+/* NAVBAR DESIGN */
+
+.header {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.header .navbar {
+    height: 70px;
+    display: flex;
+    padding: 0 25px;
+    align-items: center;
+    background-color: #252525;
+    justify-content: space-between;
+}
+
+.header .navbar .navbarLeft {
+    display: flex;
+    justify-content: center;
+}
+
+.header .navbar .navbarLeft p {
+    font-size: 22px;
+    font-family: MontserratB;
+    background: -webkit-linear-gradient(0deg, #93BFCF 20%, #DED9C4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header .navbar .navbarRight {
+    gap: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .navbar .navbarRight a {
+    gap: 10px;
+    display: flex;
+    font-size: 10px;
+    color: #FFFFFF50;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 0.15px;
+    transition: all 0.5s ease;
+    font-family: MontserratM;
+}
+
+.header .navbar .navbarRight a.Active {
+    color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:hover {
+    color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:focus-within {
+    outline: none;
+}
+
+.header .navbar .navbarRight a .markLine {
+    width: 3px;
+    height: 1.35vh;
+    border-radius: 1.5px;
+    background-color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:last-child {
+    font-size: 10px;
+    color: #252525;
+    padding: 6px 30px;
+    border-radius: 4px;
+    font-family: MontserratSB;
+    background-color: #93BFCF;
+}
+
+.header .navbar .navbarRight a:last-child:hover {
+    background-color: #74A0B0;
+}
+
+.header .navbar .dropDown {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .navbar .dropDown {
+    font-size: 20px;
+    color: #FFFFFF75;
+    transition: all 0.5s ease;    
+}
+
+.header .navbar .dropDown:hover {
+    color: #93BFCF;
+}
+
+/* SUBHEADER DESIGN */
+
+.subHeader {
+    display: flex;
+    padding: 20px 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subHeader .subHeaderLeft {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.subHeader .subHeaderLeft p:first-child {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.25px;
+    font-family: MontserratM;
+}
+
+.subHeader .subHeaderLeft p:last-child {
+    font-size: 24px;
+    color: #74A0B0;
+    margin-left: -1px;
+    font-family: MontserratB;
+}
+
+.subHeader .subHeaderRight {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.subHeader .subHeaderRight a {
+    gap: 10px;
+    display: flex;
+    font-size: 10px;
+    color: #252525;
+    padding: 6px 25px;
+    border-radius: 4px;
+    align-items: center;
+    text-decoration: none;
+    font-family: MontserratSB;
+    transition: all 0.5s ease;
+    background-color: #93BFCF;
+}
+
+.subHeader .subHeaderRight a i {
+    font-size: 12px;
+}
+
+.subHeader .subHeaderRight a:hover {
+    background-color: #74A0B0;
+}
+
+.subHeader .subHeaderRight a:focus-within {
+    outline: none;
+}
+
+/* REGISTER DESIGN */
+
+.register {
+    gap: 15px;
+    display: flex;
+    padding: 20px 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* FORM REGISTER DESIGN */
+
+.register .formRegister {
+    gap: 10px;
+    width: 30%;
+    height: 400px;
+    display: flex;
+    padding: 20px 25px;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #10101025;  
+}
+
+.register .formRegister .headerFormRegister {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.register .formRegister .headerFormRegister p:first-child {
+    font-size: 14px;
+    color: #252525;
+    font-family: MontserratB;
+}
+
+.register .formRegister .headerFormRegister p:last-child {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.25px;
+    font-family: MontserratSB;
+}
+
+.register .formRegister .lineFormRegister {
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #ECEDEC;
+}
+
+.register .formRegister .contentFormRegister {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    align-items: start;
+    flex-direction: column;
+}
+
+.register .formRegister .contentFormRegister .inputBox {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.register .formRegister .contentFormRegister .inputBox input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 10px;
+    margin-top: 15px;
+    color: #252525;
+    border-radius: 8px;
+    background: transparent;
+    font-family: MontserratM;
+    transition: all 0.5s ease;
+    border: solid 1.5px #ECEDEC;
+}
+
+.register .formRegister .contentFormRegistern .inputBox:first-child input {
+    text-transform: lowercase;
+}
+
+.register .formRegister .contentFormRegister .inputBox input:focus-within {
+    border: solid 1.5px #252525;
+}
+
+.register .formRegister .contentFormRegister .inputBox label {
+    top: 10px;
+    left: 10px;
+    padding: 0 5px;
+    font-size: 10px;
+    color: #252525;
+    position: absolute;
+    font-family: MontserratSB;
+    background-color: #FFFFFF;
+}
+
+.register .formRegister .contentFormRegister .alertMessage {
+    gap: 5px;
+    opacity: 0;
+    display: flex;
+    margin: 0 5px;
+    font-size: 10px;
+    margin-top: 10px;
+    color: #6096B4;
+    align-items: center;
+    font-family: MontserratSB
+}
+
+.register .formRegister .contentFormRegister .registerButton {
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 10px;
+    margin-top: 10px;
+    color: #FFFFFF;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    font-family: MontserratSB;
+    transition: all 0.5s ease;
+    background-color: #93BFCF;
+}
+
+
+.register .formRegister .contentFormRegister .registerButton:hover {
+    background-color: #74A0B0;
+}
+
+/* TABLE USER DESIGN */
+
+.register .tableUser {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    padding: 20px 25px;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #10101025;  
+}
+
+.register .tableUser .headerTableUser {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.register .tableUser .headerTableUser .headerTableUserLeft {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.register .tableUser .headerTableUser .headerTableUserLeft p:first-child {
+    font-size: 14px;
+    color: #252525;
+    font-family: MontserratB;
+}
+
+.register .tableUser .headerTableUser .headerTableUserLeft p:last-child {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.25px;
+    font-family: MontserratSB;
+}
+
+.register .tableUser .headerTableUser .headerTableUserRight {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.register .tableUser .headerTableUser .headerTableUserRight .legend {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.register .tableUser .headerTableUser .headerTableUserRight .legend p {
+    gap: 5px;
+    display: flex;
+    font-size: 10px;
+    color: #252525;
+    align-items: center;
+    font-family: MontserratSB;
+}
+
+.register .tableUser .headerTableUser .headerTableUserRight .legend p:nth-child(1) i {
+    font-size: 12px;
+    color: #93BFCF;
+}
+
+.register .tableUser .headerTableUser .headerTableUserRight .legend p:nth-child(2) i {
+    font-size: 12px;
+    color: #DED9C4;
+}
+
+.register .tableUser .headerTableUser .headerTableUserRight .searchInput {
+    width: 250px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.register .tableUser .headerTableUser .headerTableUserRight .searchInput input {
+    width: 100%;
+    height: 25px;
+    outline: none;
+    font-size: 10px;
+    color: #252525;
+    padding-left: 30px;
+    border-radius: 4px;
+    font-family: MontserratM;
+    transition: all 0.5s ease;
+    background-color: #FFFFFF;
+    border: solid 1.5px #ECEDEC;
+}
+
+.register .tableUser .headerTableUser .headerTableUserRight .searchInput input:focus-within {
+    border: solid 1.5px #93BFCF;
+}
+
+.register .tableUser .headerTableUser .headerTableUserRight .searchInput input::placeholder {
+    color: #C1C1C1;
+}
+
+.register .tableUser .headerTableUser .headerTableUserRight .searchInput .icon {
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    fill: #93BFCF;
+    position: absolute;
+}
+
+.register .tableUser .lineTableUser {
+    width: 100%;
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 1px;
+    background-color: #ECEDEC;
+}
+
+.register .tableUser .contentTableUser {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.register .tableUser .contentTableUser::-webkit-scrollbar {
+    display: none;
+}
+
+.register .tableUser .contentTableUser .userBox {
+    width: 100%;
+    display: flex;
+    padding: 12px 0;
+    border-radius: 6px;
+    align-items: center;
+    text-decoration: none;
+    justify-content: start;
+    transition: all 0.25s ease;
+    border-bottom: solid 1px #ECEDEC;
+}
+
+.register .tableUser .contentTableUser .userBox:hover {
+    background-color: #F8F8F8;
+}
+
+.register .tableUser .contentTableUser .userBox .infoUser {
+    gap: 10px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    margin-left: 5px;
+    align-items: center;
+    justify-content: start;
+}
+
+.register .tableUser .contentTableUser .userBox .infoUser .idUser {
+    width: 20%;
+    display: flex;
+    font-size: 10px;
+    color: #252525;
+    align-items: center;
+    font-family: Petrov;
+    letter-spacing: 0.15px;
+    justify-content: center;
+}
+
+.register .tableUser .contentTableUser .userBox .infoUser .infoUserGap {
+    font-size: 12px;
+    color: #C1C1C1;
+}
+
+.register .tableUser .contentTableUser .userBox .infoUser .nameAndJob {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.register .tableUser .contentTableUser .userBox .infoUser .nameAndJob p:first-child {
+    font-size: 12px;
+    color: #252525;
+    font-family: MontserratB;
+}
+
+.register .tableUser .contentTableUser .userBox .infoUser .nameAndJob p:last-child {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.15px;
+    font-family: MontserratR;
+}
+
+.register .tableUser .contentTableUser .userBox .userDetails {
+    gap: 5px;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.register .tableUser .contentTableUser .userBox .userDetails .gap {
+    font-size: 12px;
+    color: #C1C1C1;
+}
+
+.register .tableUser .contentTableUser .userBox .userDetails .userDetailsBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register .tableUser .contentTableUser .userBox .userDetails .userDetailsBox p {
+    width: 75%;
+    padding: 4px 0;
+    font-size: 10px;
+    color: #252525;
+    text-align: center;
+    font-family: MontserratSB;
+}
+
+.register .tableUser .contentTableUser .userBox  .userDetails .userDetailsBox:nth-child(5) p {
+    border-radius: 4px;
+    background-color: #93BFCF;
+}
+
+.register .tableUser .contentTableUser .userBox  .userDetails .userDetailsBox:nth-child(7) p {
+    border-radius: 4px;
+    background-color: #DED9C4;
+}
+
+@media only screen and (max-width: 1000px) {
+    /* NAVBAR RESPONSIVE */
+    .header .navbar .navbarLeft p {
+        font-size: 20px;
+    }
+    .header .navbar .navbarRight {
+        left: 0;
+        top: 35px;
+        opacity: 0;
+        z-index: -1;  
+        display: flex;
+        margin: 0 15px;
+        visibility: hidden;
+        align-items: start;
+        position: absolute;
+        height: fit-content;
+        flex-direction: column;
+        padding: 40px 30px 25px;
+        transition: all 0.5s ease;
+        background-color: #252525;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 0 5px #252525;
+    }
+    .header .navbar .navbarRight a {
+        margin: 0 auto;
+    }
+    .header .navbar .navbarRight.Active {
+        top: 65px;
+        opacity: 1;
+        visibility: visible;
+    }
+    .header .navbar .dropDown {
+        display: flex;
+    }
+    .header .navbar .dropDown.Active {
+        color: #93BFCF;
+    }
+    /* SUBHEADER RESPONSIVE */
+    .subHeader {
+        gap: 10px;
+        align-items: start;
+        flex-direction: column;
+    }
+    .subHeader .subHeaderLeft p:last-child {
+        font-size: 18px;
+    }
+    /* REGISTER RESPONSIVE */
+    .register {
+        flex-wrap: wrap;
+    }
+    .register .formRegister {
+        width: 100%;
+    }
+    .register .formRegister .headerFormRegister p:first-child {
+        font-size: 12px;
+    }
+    .register .formRegister .headerFormRegister p:last-child {
+        font-size: 8px;
+    }
+    .register .formRegister .contentFormRegister .inputBox label {
+        font-size: 8px;
+    }
+    .register .tableUser {
+        width: 100%;
+    }
+    .register .tableUser .headerTableUser .headerTableUserLeft p:first-child {
+        font-size: 12px;
+    }
+    .register .tableUser .headerTableUser .headerTableUserLeft p:last-child {
+        font-size: 8px;
+    }
+    .register .tableUser .headerTableUser .headerTableUserRight .legend {
+        display: none;
+    }
+    .register .tableUser .headerTableUser .headerTableUserRight .searchInput {
+        width: 150px;
+    }
+    .register .tableUser .headerTableUser .headerTableUserRight .searchInput input {
+        height: 20px;
+    }
+    .register .tableUser .contentTableUser .userBox .infoUser .idUser {
+        display: none;
+    }
+    .register .tableUser .contentTableUser .userBox .infoUser .infoUserGap {
+        display: none;
+    }
+    .register .tableUser .contentTableUser .userBox .infoUser {
+        width: 55%;
+    }
+    .register .tableUser .contentTableUser .userBox .infoUser .nameAndJob p:first-child {
+        font-size: 10px;
+    }
+    .register .tableUser .contentTableUser .userBox .infoUser .nameAndJob p:last-child {
+        font-size: 8px;
+    }
+    .register .tableUser .contentTableUser .userBox .userDetails {
+        width: 45%;
+    }
+    .register .tableUser .contentTableUser .userBox .userDetails .userDetailsBox:nth-child(1),
+    .register .tableUser .contentTableUser .userBox .userDetails .userDetailsBox:nth-child(3),
+    .register .tableUser .contentTableUser .userBox .userDetails .gap:nth-child(2),
+    .register .tableUser .contentTableUser .userBox .userDetails .gap:nth-child(4) {
+        display: none;
+    }
+    .register .tableUser .contentTableUser .userBox  .userDetails .userDetailsBox:nth-child(5) p,
+    .register .tableUser .contentTableUser .userBox  .userDetails .userDetailsBox:nth-child(7) p {
+        width: 50%;
+        padding: 2px 0;
+        font-size: 8px;
+    }
+}

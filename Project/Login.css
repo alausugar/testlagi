@@ -1,0 +1,426 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* IMPORT FONT */
+
+@font-face {
+    font-family: NexaE;
+    src: url(./Font/Nexa-ExtraLight.ttf);
+}
+@font-face {
+    font-family: NexaH;
+    src: url(./Font/Nexa-Heavy.ttf);
+}
+@font-face {
+    font-family: MontserratR;
+    src: url(./Font/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: MontserratM;
+    src: url(./Font/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: MontserratSB;
+    src: url(./Font/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: MontserratB;
+    src: url(./Font/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Sephora;
+    src: url(./Font/Sephora.ttf);
+}
+@font-face {
+    font-family: SephoraB;
+    src: url(./Font/Sephora-Bold.ttf);
+}
+@font-face {
+    font-family: Petrov;
+    src: url(./Font/PetrovSans-Bold.ttf);
+}
+
+/* KEYFRAME FOR ANIMATION */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 1;
+    } 
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* HEADER DESIGN */
+
+.header {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    position: absolute;
+}
+
+.header .navbar {
+    display: none;
+    padding: 25px 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .navbar .navbarLeft {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar .navbarLeft p {
+    font-size: 20px;
+    color: #74A0B0;
+    font-family: MontserratB;
+}
+
+/* LOGIN PAGE DESIGN */
+
+.loginPage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGIN PAGE LEFT DESIGN */
+
+.loginPage .loginPageLeft {
+    --s: 150px;
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    --c1: #252525;
+    --c2: #191919;
+    --_g: var(--c1) 0% 5%, var(--c2) 6% 15%, 
+    var(--c1) 16% 25%, var(--c2) 26% 35%,
+    var(--c1) 36% 45%, var(--c2) 46% 55%, 
+    var(--c1) 56% 65%, var(--c2) 66% 75%,
+    var(--c1) 76% 85%, var(--c2) 86% 95%, #0000 96%;
+    background: radial-gradient(50% 50% at 100% 0, var(--_g)), 
+    radial-gradient(50% 50% at 0 100%, var(--_g)), radial-gradient(50% 50%, var(--_g)), 
+    radial-gradient(50% 50%, var(--_g)) calc(var(--s) / 2) calc(var(--s) / 2)var(--c1);
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 20px 20px 0;
+    background-size: var(--s) var(--s);
+    box-shadow: 0 5px 15px rgba(15, 15, 15, 0.5);
+}
+
+.loginPage .loginPageLeft .contentLoginPageLeft {
+    display: flex;
+    width: fit-content;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginPage .loginPageLeft .contentLoginPageLeft p:nth-child(1) {
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    font-family: MontserratM;
+}
+
+.loginPage .loginPageLeft .contentLoginPageLeft p:nth-child(2) {
+    font-size: 72px;
+    margin-left: -2px;
+    letter-spacing: 0.25px;
+    font-family: MontserratB;
+    background: -webkit-linear-gradient(0deg, #93BFCF 20%, #93BFCF, #DED9C4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.loginPage .loginPageLeft .contentLoginPageLeft p:nth-child(3) {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    font-family: MontserratM;
+}
+
+/* LOGIN PAGE RIGHT DESIGN */
+
+.loginPage .loginPageRight {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight {
+    gap: 10px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .headerFormLogin {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    text-align: start;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .headerFormLogin p::selection {
+    background-color: transparent;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .headerFormLogin p:nth-child(1) {
+    font-size: 24px;
+    color: #252525;
+    font-family: MontserratB;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .headerFormLogin .lineHeaderForm {
+    width: 15%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #ECEDEC;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .headerFormLogin p:nth-child(3) {
+    font-size: 10px;
+    color: #C1C1C1;
+    letter-spacing: 0.25px;
+    font-family: MontserratM;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .contentFormLogin {
+    gap: 5px;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .contentFormLogin .inputBox {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .contentFormLogin .inputBox input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 10px;
+    margin-top: 15px;
+    color: #252525;
+    border-radius: 8px;
+    background: transparent;
+    font-family: MontserratM;
+    transition: all 0.5s ease;
+    border: solid 1.5px #ECEDEC;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .contentFormLogin .inputBox:first-child input {
+    text-transform: lowercase;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .contentFormLogin .inputBox input:focus-within {
+    border: solid 1.5px #252525;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .contentFormLogin .inputBox label {
+    top: 10px;
+    left: 10px;
+    padding: 0 5px;
+    font-size: 10px;
+    color: #252525;
+    position: absolute;
+    font-family: MontserratSB;
+    background-color: #FFFFFF;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .contentFormLogin .alertMessage {
+    gap: 5px;
+    opacity: 0;
+    display: flex;
+    font-size: 8px;
+    color: #191919;
+    padding: 5px 10px 0;
+    align-items: center;
+    font-family: MontserratSB;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .contentFormLogin .loginButton {
+    width: 100%;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+    margin-top: 5px;
+    color: #FFFFFF;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    font-family: MontserratSB;
+    transition: all 0.5s ease;
+    background-color: #252525;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .contentFormLogin .loginButton:hover {
+    background-color: #191919;
+}
+
+.loginPage .loginPageRight .contentLoginPageRight .contentFormLogin .loginButton:focus-within {
+    outline: none;
+}
+
+.loginPage .loginPageLeft .contentLoginPageLeft p::selection,
+.loginPage .loginPageRight .contentLoginPageRight .contentFormLogin p::selection,
+.loginPage .loginPageRight .contentLoginPageRight .contentFormLogin label::selection,
+.loginPage .loginPageRight .contentLoginPageRight .contentFormLogin button::selection {
+    background-color: transparent;
+}
+
+/* FOOTER */
+
+.loginPage .loginPageRight .footerLoginPage {
+    bottom: 0;
+    padding: 15px 0;
+    font-size: 10px;
+    color: #93BFCF;
+    position: absolute;
+    font-family: MontserratM;
+}
+
+.loader {
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    transform: rotate(165deg);
+   }
+   
+   .loader:before, .loader:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    transform: translate(-50%, -50%);
+   }
+   
+   .loader:before {
+    animation: before8 2s infinite;
+   }
+   
+   .loader:after {
+    animation: after6 2s infinite;
+   }
+   
+   @keyframes before8 {
+    0% {
+     width: 0.5em;
+     box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+   
+    35% {
+     width: 2.5em;
+     box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+    }
+   
+    70% {
+     width: 0.5em;
+     box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+   
+    100% {
+     box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+   }
+   
+   @keyframes after6 {
+    0% {
+     height: 0.5em;
+     box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+   
+    35% {
+     height: 2.5em;
+     box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+    }
+   
+    70% {
+     height: 0.5em;
+     box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+    }
+   
+    100% {
+     box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+   }
+   
+   .loader {
+    display: none;
+    position: absolute;
+    top: calc(50% - 1.25em);
+    left: calc(50% - 1.25em);
+   }
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1000px) {
+    .header .navbar {
+        display: block;
+    }
+    .loginPage .loginPageLeft {
+        display: none;
+    }
+    .loginPage .loginPageRight {
+        width: 100%;
+    }
+    .loginPage .loginPageRight .contentLoginPageRight {
+        width: 80%;
+    }
+    .loginPage .loginPageRight .contentLoginPageRight .headerFormLogin {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+    .loginPage .loginPageRight .footerLoginPage {
+        padding: 25px 0;
+    }
+}
